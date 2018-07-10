@@ -31,7 +31,7 @@ namespace keylookup
                     TermsOfService = "Terms Of Service"
                 });      
             });
-            services.AddSingleton<ICache, RedisCache>();
+            services.AddSingleton<ICache, InMemoryCache>();
             services.AddSingleton<IGuidGenerator, GuidGenerator>();
             services.AddScoped<LookupFromCache>();
         }
